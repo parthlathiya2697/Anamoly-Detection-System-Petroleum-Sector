@@ -53,6 +53,7 @@ Detect the position of anamolies/flaws in petrol pipelines(each pipe) using a de
 |. | . | ... |
 
 <img src='Images/Visualised-Pipes/Analysed/Pipe-8.png' />
+<img src='Images/Visualised-Pipes/Wield-Positions/Pipe-8.png'/>
 
 ## Conclusion
 We can detect position of wielded iron and visualise the anamoly itself.

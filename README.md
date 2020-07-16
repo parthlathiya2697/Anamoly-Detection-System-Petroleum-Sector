@@ -22,7 +22,7 @@ Detect the **position** of anamolies in petrol pipelines using data generated fr
 - Edge detection using **Sobel**, OpenCV.
 
 ### Different Approaches Used
-- [ ] Approach 1: Using Various Statistical methods like InterQuartile Range, Z-score, etc.     
+- [x] Approach 1: Using Various Statistical methods like InterQuartile Range, Z-score, etc.     
 - [x] Approach 2: By Filtering anamolies with Sobel Derivatives,Image Processing in OpenCV.
 
 [Approach 1](Notebooks/anamoly-detection.ipynb) | [Approach 2](Notebooks/anamoly-detection-using-image.ipynb)
@@ -48,15 +48,14 @@ Detect the **position** of anamolies in petrol pipelines using data generated fr
 ## Conclusion
 We can detect position of wielded iron and also visualise the metal loss.
 
-### Business Understanding
-- Many pipes are wielded together to form a pipeline.
-- Pigging is a concept in pipeline maintenance that involves the use of devices known as pigs, which clean pipelines and are capable of checking pipeline condition from inside.
-- Pigs inspects pipelines by receiving magnetic flux from the walls of the pipe.
-- Applications of Pigging include oil & gas, lube oil, chemical plants and hygienic applications such as pharmaceutical or food, etc.
+> ### Little Business Understanding
+> - Many pipes are wielded together to form a pipeline.
+> - Pigging is a concept in pipeline maintenance that involves the use of devices known as pigs, which clean pipelines and are capable of checking pipeline condition from inside.
+> - Pigs inspects pipelines by receiving magnetic flux from the walls of the pipe.
+> - Applications of Pigging include oil & gas, lube oil, chemical plants and hygienic applications such as pharmaceutical or food, etc.
 
-<div style="display:flex"><img src='Images/petrol-pipe.jpg' width=200 height=200/>
-<img src='Images/pig.jpg' width=200 height=200/></div>
+> <div style="display:flex"><img src='Images/petrol-pipe.jpg' width=200 height=200/>
+> <img src='Images/pig.jpg' width=200 height=200/></div>
 
-- Each "Pig"(here) has 84 sensors in circumference that captures data every millisecond while travelling in pipes. So this becomes a `time series problem` where each traversal time for each independent pipe is 5_000 milliseconds.
-
+> - Each "Pig"(here) has 84 sensors in circumference that captures data every millisecond while travelling in pipes. So this becomes a `time series problem` where each traversal time for each independent pipe is 5_000 milliseconds.
 ###### Tribute @my Mentor Hasan Ali

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Anamoly-detection-petroleum by parthlathiya0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Anamoly-detection-petroleum</h1>
+      <h2 class="project-tagline">Data Science Project to detect the position of anamolies/flaws/metal loss in petrol pipelines(each pipe) using data provided by a device called &quot;Pig&quot; that travels inside the pipes.</h2>
+      <a href="https://github.com/parthlathiya0/Anamoly-Detection-Petroleum" class="btn">View on GitHub</a>
+      <a href="https://github.com/parthlathiya0/Anamoly-Detection-Petroleum/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/parthlathiya0/Anamoly-Detection-Petroleum/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="anamoly-detection-petroleum" class="anchor" href="#anamoly-detection-petroleum" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Anamoly-Detection-Petroleum</h1>
+<h2>
+<a id="problem" class="anchor" href="#problem" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Problem</h2>
+<p>Detect the <strong>position</strong> of anamolies in petrol pipelines using data generated from a maintainance device called "Pig" that travels inside the pipeline.</p>
+<ul>
+<li>Detecting <strong>Wielding</strong>
+</li>
+<li>Visualising <strong>Metal loss</strong> and or dents</li>
+</ul>
+<img src="Images/process.gif">
+<h3>
+<a id="about-data" class="anchor" href="#about-data" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>About Data</h3>
+<ul>
+<li>Data is in <strong>binary</strong> format saved in - 'captured_data.bin' file, captured from 84 sensors for 50_000 milliseconds</li>
+<li>Pigs directly captured/store data in <code>binary(.bin)</code> format</li>
+</ul>
+<h3>
+<a id="data-analysis-insights-with-understanding" class="anchor" href="#data-analysis-insights-with-understanding" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Data Analysis Insights with understanding</h3>
+<ul>
+<li>Data varies with time i.e., <strong>Time Series data</strong>
+</li>
+<li>We can also see a <strong>repeated pattern</strong> of <strong>flux</strong> at times in all sensors.</li>
+</ul>
+<h3>
+<a id="techniques" class="anchor" href="#techniques" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Techniques</h3>
+<ul>
+<li>
+<strong>Normalised</strong> data for comparision purpose.</li>
+<li>
+<strong>Aggregated(sum)</strong> all sensors to amplify anamoly.</li>
+<li>The <strong>z-score</strong> method is effective here with comparision to <em>Inter-Quartile Range</em> method as per the observations.</li>
+<li>Edge detection using <strong>Sobel</strong>, OpenCV.</li>
+</ul>
+<h3>
+<a id="different-approaches-used" class="anchor" href="#different-approaches-used" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Different Approaches Used</h3>
+<ul>
+<li>[x] Approach 1: Using Various Statistical methods like InterQuartile Range, Z-score, etc.</li>
+<li>[x] Approach 2: By Filtering anamolies with Sobel Derivatives,Image Processing in OpenCV.</li>
+</ul>
+<p><a href="Notebooks/anamoly-detection.ipynb">Approach 1</a> | <a href="Notebooks/anamoly-detection-using-image.ipynb">Approach 2</a></p>
+<h2>
+<a id="output" class="anchor" href="#output" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Output</h2>
+<table>
+<thead>
+<tr>
+<th>Pipe</th>
+<th>Number</th>
+<th>Outlier Position</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>624</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>678</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1</td>
+<td>5070</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1</td>
+<td>5117</td>
+</tr>
+<tr>
+<td>4</td>
+<td>1</td>
+<td>8252</td>
+</tr>
+<tr>
+<td>5</td>
+<td>1</td>
+<td>8286</td>
+</tr>
+<tr>
+<td>6</td>
+<td>2</td>
+<td>11397</td>
+</tr>
+<tr>
+<td>7</td>
+<td>2</td>
+<td>14990</td>
+</tr>
+<tr>
+<td>8</td>
+<td>3</td>
+<td>15001</td>
+</tr>
+<tr>
+<td>.</td>
+<td>.</td>
+<td>...</td>
+</tr>
+<tr>
+<td>.</td>
+<td>.</td>
+<td>...</td>
+</tr>
+<tr>
+<td>.</td>
+<td>.</td>
+<td>...</td>
+</tr>
+</tbody>
+</table>
+<h2>
+<a id="conclusion" class="anchor" href="#conclusion" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Conclusion</h2>
+<p>We can detect position of wielded iron and also visualise the metal loss.</p>
+<blockquote>
+<h3>
+<a id="little-business-understanding" class="anchor" href="#little-business-understanding" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Little Business Understanding</h3>
+<ul>
+<li>Many pipes are wielded together to form a pipeline.</li>
+<li>Pigging is a concept in pipeline maintenance that involves the use of devices known as pigs, which clean pipelines and are capable of checking pipeline condition from inside.</li>
+<li>Pigs inspects pipelines by receiving magnetic flux from the walls of the pipe.</li>
+<li>Applications of Pigging include oil &amp; gas, lube oil, chemical plants and hygienic applications such as pharmaceutical or food, etc.</li>
+</ul>
+</blockquote>
+<blockquote>
+<div>
+<img src="Images/petrol-pipe.jpg" width="200" height="200/">
+<img src="Images/pig.jpg" width="200" height="200/">
+</div>
+</blockquote>
+<blockquote>
+<ul>
+<li>Each "Pig"(here) has 84 sensors in circumference that captures data every millisecond while travelling in pipes. So this becomes a <code>time series problem</code> where each traversal time for each independent pipe is 5_000 milliseconds.</li>
+</ul>
+</blockquote>
+<h6>
+<a id="tribute-my-mentor-hasan-ali" class="anchor" href="#tribute-my-mentor-hasan-ali" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tribute <a class="user-mention" data-hovercard-type="user" data-hovercard-url="/users/my/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/my">@my</a> Mentor Hasan Ali</h6>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/parthlathiya0/Anamoly-Detection-Petroleum">Anamoly-detection-petroleum</a> is maintained by <a href="https://github.com/parthlathiya0">parthlathiya0</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>

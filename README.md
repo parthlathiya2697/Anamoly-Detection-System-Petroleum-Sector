@@ -59,3 +59,10 @@ We can detect position of wielded iron and also visualise the metal loss.
 
 > - Each "Pig"(here) has 84 sensors in circumference that captures data every millisecond while travelling in pipes. So this becomes a `time series problem` where each traversal time for each independent pipe is 5_000 milliseconds.
 ###### Tribute @my Mentor Hasan Ali 🙏
+
+
+Connect with Me
+Feel free to reach out or check out my other projects
+[LinkedIn Demo](https://www.linkedin.com/feed/update/urn:li:activity:6688042267397238784/)
+
+
